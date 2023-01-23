@@ -3,8 +3,9 @@ GDS0453 - Documentación proyecto IoT
 # ProjectsIoT2022
 
 ## Integrantes
--Cristian Emmnuel Gutiérrez Díaz  
-- Nayeli Moya Díaz 
+
+- Cristian Emmanuel Gutiérrez Díaz
+- Nayeli Moya Díaz
 - Nayeli Jaqueline Padrón Velázquez
 - Oscar Iván Pérez Mejía
 
