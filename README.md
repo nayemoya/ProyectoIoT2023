@@ -3,10 +3,10 @@ GDS0453 - Documentación proyecto IoT
 # ProjectsIoT2022
 
 ## Integrantes
-- Nombre y Apellidos del primer integrante
-- Nombre y Apellidos del segundo integrante
-- Nombre y Apellidos del tercer integrante
-- Nombre y Apellidos del cuarto integrante
+-Cristian Emmnuel Gutiérrez Díaz  
+- Nayeli Moya Díaz 
+- Nayeli Jaqueline Padrón Velázquez
+- Oscar Iván Pérez Mejía
 
 ## Objetivo general
 Parrafo con el objetivo general
