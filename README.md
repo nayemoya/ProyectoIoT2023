@@ -11,6 +11,7 @@ GDS0453 - Documentación proyecto IoT
 
 ## Objetivo general
 Parrafo con el objetivo general
+
 ### Objetivos específicos
 - Elemento 1 de la lista de objetivos específicos
 - Elemento 2 de la lista de objetivos específicos
