@@ -54,5 +54,6 @@ Se pretende elaborar un dispositivo el cual cumpla la función de proveer de ali
 |4|Quiero que a través del dispositivo revisar cuantas veces se ha servido comida a mi mascota.|Baja|3 semanas|Con la ayuda del dashboard y con una estimación del alimento sobrante|Oscar Iván Pérez Mejía|
 
 ## Prototipo en dibujo
-![](Aspose.Words.c0a6ef2d-04fd-41d4-a1ce-ebc52d1e014c.006.jpeg)
+![Aspose Words c0a6ef2d-04fd-41d4-a1ce-ebc52d1e014c 006](https://user-images.githubusercontent.com/107650526/217642875-0c6262e4-34b8-4484-9b81-54537164564c.jpeg)
+
 
