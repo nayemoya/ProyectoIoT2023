@@ -1,0 +1,655 @@
+[
+    {
+        "id": "e6b1c1d3bd3fc3d4",
+        "type": "tab",
+        "label": "mqtt database",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "590ca1f334dddba6",
+        "type": "mqtt in",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "topic": "temperatura-y-luz",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "68fa949cb584d928",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "7aeabd4eed90d0e0"
+            ]
+        ]
+    },
+    {
+        "id": "7aeabd4eed90d0e0",
+        "type": "function",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "func": "// Obtener el valor del mensaje\nvar value = msg.payload;\n\n// Generar la sentencia SQL de inserción\nvar query = \"INSERT INTO dhtValues (Valor) VALUES (\" + value + \")\";\n\n// Asignar la sentencia SQL a msg.topic\nmsg.topic = query;\n\n// Continuar con el flujo de trabajo\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 300,
+        "wires": [
+            [
+                "3aac39f536630588"
+            ]
+        ]
+    },
+    {
+        "id": "3dd859b43afc2ac9",
+        "type": "mqtt in",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "topic": "temperatura-y-luz",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "68fa949cb584d928",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 40,
+        "wires": [
+            [
+                "51a89f4b0a349a71"
+            ]
+        ]
+    },
+    {
+        "id": "51a89f4b0a349a71",
+        "type": "function",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "temp",
+        "func": "msg.payload = parseFloat(msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 40,
+        "wires": [
+            [
+                "e22fc09f72167726"
+            ]
+        ]
+    },
+    {
+        "id": "34145a4d7b663af6",
+        "type": "ui_gauge",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "group": "30fd32c31278d675",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "Temperatura",
+        "label": "C",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "50",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "20",
+        "seg2": "30",
+        "diff": false,
+        "className": "gauge",
+        "x": 970,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "e22fc09f72167726",
+        "type": "delay",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": true,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 40,
+        "wires": [
+            [
+                "34145a4d7b663af6",
+                "9d101b6d6b8cebc7"
+            ]
+        ]
+    },
+    {
+        "id": "b3bde78d62b961dd",
+        "type": "mqtt in",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "topic": "humedad-y-luz",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "68fa949cb584d928",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 120,
+        "wires": [
+            [
+                "6e9e30424b3b8f0c",
+                "6867345a6e0e6161"
+            ]
+        ]
+    },
+    {
+        "id": "6e9e30424b3b8f0c",
+        "type": "function",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "temp",
+        "func": "msg.payload = parseFloat(msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [
+                "8f80b80792c3a0cd"
+            ]
+        ]
+    },
+    {
+        "id": "58773371d34c0922",
+        "type": "ui_gauge",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "group": "30fd32c31278d675",
+        "order": 2,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "Humedad",
+        "label": "%",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "20",
+        "seg2": "30",
+        "diff": false,
+        "className": "",
+        "x": 820,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8f80b80792c3a0cd",
+        "type": "delay",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 120,
+        "wires": [
+            [
+                "58773371d34c0922",
+                "9b80d0fe2b31791f"
+            ]
+        ]
+    },
+    {
+        "id": "dedec49683dec022",
+        "type": "mqtt in",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "topic": "luz",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "68fa949cb584d928",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "581460d561bea5a9",
+                "762efd8397a0abc2"
+            ]
+        ]
+    },
+    {
+        "id": "581460d561bea5a9",
+        "type": "function",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "temp",
+        "func": "msg.payload = parseFloat(msg.payload);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 200,
+        "wires": [
+            [
+                "8194d786367e6f3a"
+            ]
+        ]
+    },
+    {
+        "id": "170820e7e8958912",
+        "type": "ui_gauge",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "group": "30fd32c31278d675",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "Intensidad",
+        "label": "lux",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4095",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "1000",
+        "seg2": "2000",
+        "diff": false,
+        "className": "",
+        "x": 790,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8194d786367e6f3a",
+        "type": "delay",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "170820e7e8958912",
+                "def3de3ae24add1e"
+            ]
+        ]
+    },
+    {
+        "id": "3aac39f536630588",
+        "type": "mysql",
+        "z": "e6b1c1d3bd3fc3d4",
+        "mydb": "116ee9975e6e9ead",
+        "name": "",
+        "x": 610,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9d101b6d6b8cebc7",
+        "type": "ui_chart",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "group": "38a794ac11b4d76a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1010,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9b80d0fe2b31791f",
+        "type": "ui_chart",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "group": "38a794ac11b4d76a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Humedad",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1000,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "def3de3ae24add1e",
+        "type": "ui_chart",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "group": "38a794ac11b4d76a",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Intensidad",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "4095",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 990,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3de0750bdc188520",
+        "type": "mqtt in",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "topic": "actuadores",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "68fa949cb584d928",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 160,
+        "y": 520,
+        "wires": [
+            [
+                "4eee4ccce28e478e"
+            ]
+        ]
+    },
+    {
+        "id": "4eee4ccce28e478e",
+        "type": "ui_text",
+        "z": "e6b1c1d3bd3fc3d4",
+        "group": "30fd32c31278d675",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Estado",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 420,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "6867345a6e0e6161",
+        "type": "function",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "func": "// Obtener el valor del mensaje\nvar value = msg.payload;\n\n// Generar la sentencia SQL de inserción\nvar query = \"INSERT INTO dhtValues1 (Valor) VALUES (\" + value + \")\";\n\n// Asignar la sentencia SQL a msg.topic\nmsg.topic = query;\n\n// Continuar con el flujo de trabajo\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 360,
+        "wires": [
+            [
+                "3b97529af4bfbe0a"
+            ]
+        ]
+    },
+    {
+        "id": "3b97529af4bfbe0a",
+        "type": "mysql",
+        "z": "e6b1c1d3bd3fc3d4",
+        "mydb": "116ee9975e6e9ead",
+        "name": "",
+        "x": 610,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "762efd8397a0abc2",
+        "type": "function",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "",
+        "func": "// Obtener el valor del mensaje\nvar value = msg.payload;\n\n// Generar la sentencia SQL de inserción\nvar query = \"INSERT INTO photoValues (Valor) VALUES (\" + value + \")\";\n\n// Asignar la sentencia SQL a msg.topic\nmsg.topic = query;\n\n// Continuar con el flujo de trabajo\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 420,
+        "wires": [
+            [
+                "9e209f971095087e"
+            ]
+        ]
+    },
+    {
+        "id": "9e209f971095087e",
+        "type": "mysql",
+        "z": "e6b1c1d3bd3fc3d4",
+        "mydb": "116ee9975e6e9ead",
+        "name": "",
+        "x": 610,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "619b4f0fa5f0f3c6",
+        "type": "ui_spacer",
+        "z": "e6b1c1d3bd3fc3d4",
+        "name": "spacer",
+        "group": "30fd32c31278d675",
+        "order": 4,
+        "width": "1",
+        "height": "1"
+    },
+    {
+        "id": "68fa949cb584d928",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.emqx.io",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "30fd32c31278d675",
+        "type": "ui_group",
+        "name": "Sensores",
+        "tab": "4a9efb19421c9c7e",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "116ee9975e6e9ead",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "aiot31",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "38a794ac11b4d76a",
+        "type": "ui_group",
+        "name": "Historial",
+        "tab": "4a9efb19421c9c7e",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4a9efb19421c9c7e",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    }
+]
