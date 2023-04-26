@@ -2,6 +2,8 @@
 GDS0453 - Documentación proyecto IoT 
 # ProjectsIoT2022
 
+##Nombre del proyecto
+Comedor Bélico
 ## Integrantes
 
 - Cristian Emmanuel Gutiérrez Díaz
@@ -34,8 +36,7 @@ Se pretende elaborar un dispositivo el cual cumpla la función de proveer de ali
 |2|DHT22|El DHT22 (AM2302) es un sensor digital de temperatura y humedad relativa de buen rendimiento y bajo costo. Integra un sensor capacitivo de humedad y un termistor para medir el aire circundante, y muestra los datos mediante una señal digital en el pin de datos.|![Aspose Words c0a6ef2d-04fd-41d4-a1ce-ebc52d1e014c 002](https://user-images.githubusercontent.com/107650526/217643056-c386284d-a99a-44d8-85a4-c3543f0ee7f5.png)|1|$135|
 |3|Sensor ultrasónico|los sensores ultrasónicos miden la distancia mediante el uso de ondas ultrasónicas. El cabezal emite una onda ultrasónica y recibe la onda reflejada que retorna desde el objeto. Los sensores ultrasónicos miden la distancia al objeto contando el tiempo entre la emisión y la recepción.|![Aspose Words c0a6ef2d-04fd-41d4-a1ce-ebc52d1e014c 003](https://user-images.githubusercontent.com/107650526/217643646-a4d1d4d1-0b68-49a1-ba3e-3b5110804ea9.png)|1|$42|
 |4|Servomotor|Un servomotor es un actuador rotativo o motor que permite un control preciso en términos de posición angular, aceleración y velocidad, capacidades que un motor normal no tiene.|![Aspose Words c0a6ef2d-04fd-41d4-a1ce-ebc52d1e014c 004](https://user-images.githubusercontent.com/107650526/217643550-267eca20-f819-4b53-a030-13fddb7b23e9.jpeg)|1|$45|
-|5|Buzzer Pasivo|Un buzzer pasivo es un tipo de zumbador que no tiene circuitos internos para generar sonido por sí solo. En su lugar, requiere que una señal eléctrica externa lo active para producir un tono o un sonido determinado. |![image](https://user-images.githubusercontent.com/107650526/234452510-d27d20c4-06e3-4cbf-82bc-7d61b1bf46bf.png)
-|1|$39|
+|5|Buzzer Pasivo|Un buzzer pasivo es un tipo de zumbador que no tiene circuitos internos para generar sonido por sí solo. En su lugar, requiere que una señal eléctrica externa lo active para producir un tono o un sonido determinado.|![image](https://user-images.githubusercontent.com/107650526/234452510-d27d20c4-06e3-4cbf-82bc-7d61b1bf46bf.png)|1|$39|
 |6|Photoresistor|Un fotoresistor es un componente electrónico que varía su resistencia eléctrica en función de la cantidad de luz que recibe. Es decir, su resistencia disminuye cuando se expone a la luz y aumenta en la oscuridad.|![image](https://user-images.githubusercontent.com/107650526/234452928-eb43798c-7b36-4ae7-9a4c-9d3310af0da7.png)|1|$69|
 |7|RGB SMD|Un LED RGB es un tipo de diodo emisor de luz que puede emitir luz en tres colores diferentes: rojo (R), verde (G) y azul (B). Al combinar diferentes intensidades de cada uno de estos colores, se pueden crear una amplia variedad de colores en el espectro visible.|![image](https://user-images.githubusercontent.com/107650526/234453729-841f4bc8-70cf-4068-8e59-c3fb4d739e2f.png)|1|$49|
 |8|Ventilador PMW|Un ventilador PWM (Pulse Width Modulation) es un tipo de ventilador que utiliza una señal eléctrica pulsante para controlar su velocidad. En lugar de simplemente variar la tensión eléctrica que se aplica al motor, como en los ventiladores convencionales, el ventilador PWM ajusta la duración de los pulsos eléctricos para controlar la velocidad de las aspas. |![image](https://user-images.githubusercontent.com/107650526/234454347-af84dee8-16a0-4d12-978d-064c74474846.png)|1|$80|
