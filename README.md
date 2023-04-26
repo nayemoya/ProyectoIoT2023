@@ -1,5 +1,8 @@
 # ProyectoIoT2023
-GDS0453 - Documentación proyecto IoT 
+Grupo: GDS0453 
+5 Cuatrimestre
+Aplicaciones de IoT
+Documentación proyecto IoT 
 
 ## Nombre del proyecto
 Comedor Bélico
@@ -10,10 +13,10 @@ Comedor Bélico
 - Nayeli Jaqueline Padrón Velázquez
 - Oscar Iván Pérez Mejía
 
-## Objetivo general
+## Objetivo General
 Se pretende elaborar un dispositivo el cual cumpla la función de proveer de alimento a nuestra mascota por medio de sensores los cuales permitan la interacción entre la mascota y el dispositivo, esto con la principal razón de alimentar a nuestra mascota en caso de olvido o por falta de presencia en el hogar. El dispositivo contara con un dashboard de control en tiempo real para poder monitorear el comportamiento del mismo.
 
-### Objetivos específicos
+### Objetivos Específicos
 \- Se requiere poder monitorear el dispositivo de manera remota por medio de una red wi fi y con ayuda de un dashboard
 
 \- Se requiere el monitoreo de la temperatura y humedad de la comida por medio de sensores
@@ -22,13 +25,13 @@ Se pretende elaborar un dispositivo el cual cumpla la función de proveer de ali
 
 \- Depositar alimento en el contenedor de manera remota, si es el caso de que el usuario no se encuentre en casa
 
-## Tabla de Software utilizado
+## Tabla de Software Utilizado
 |Id|Software|Versión|Tipo|
 | :-: | :-: | :-: | :-: |
 |1|Visual Studio Code|17.2|IDE|
 |2|Arduino|2.0.0|IDE|
 
-## Tabla con el hardware utilizado
+## Tabla con el Hardware Utilizado
 |Id|Componente|Descripción|Imagen|Cantidad |Costo Total|
 | :-: | :-:| :- | :-: | :-: | :-: |
 |1|ESP32|El módulo ESP32 es una solución de Wi-Fi/Bluetooth todo en uno, integrada y certificada que proporciona no solo la radio inalámbrica, sino también un procesador integrado con interfaces para conectarse con varios periféricos.|![Aspose Words c0a6ef2d-04fd-41d4-a1ce-ebc52d1e014c 001](https://user-images.githubusercontent.com/107650526/217643833-2a3555c5-2952-46cf-814e-397453742464.jpeg)|1|$220|
@@ -39,10 +42,10 @@ Se pretende elaborar un dispositivo el cual cumpla la función de proveer de ali
 |6|Photoresistor|Un fotoresistor es un componente electrónico que varía su resistencia eléctrica en función de la cantidad de luz que recibe. Es decir, su resistencia disminuye cuando se expone a la luz y aumenta en la oscuridad.|![image](https://user-images.githubusercontent.com/107650526/234452928-eb43798c-7b36-4ae7-9a4c-9d3310af0da7.png)|1|$69|
 |7|RGB SMD|Un LED RGB es un tipo de diodo emisor de luz que puede emitir luz en tres colores diferentes: rojo (R), verde (G) y azul (B). Al combinar diferentes intensidades de cada uno de estos colores, se pueden crear una amplia variedad de colores en el espectro visible.|![image](https://user-images.githubusercontent.com/107650526/234453729-841f4bc8-70cf-4068-8e59-c3fb4d739e2f.png)|1|$49|
 |8|Ventilador PMW|Un ventilador PWM (Pulse Width Modulation) es un tipo de ventilador que utiliza una señal eléctrica pulsante para controlar su velocidad. En lugar de simplemente variar la tensión eléctrica que se aplica al motor, como en los ventiladores convencionales, el ventilador PWM ajusta la duración de los pulsos eléctricos para controlar la velocidad de las aspas. |![image](https://user-images.githubusercontent.com/107650526/234454347-af84dee8-16a0-4d12-978d-064c74474846.png)|1|$80|
-|9|Modulo MOSFET|Es un tipo de transistor que se utiliza comúnmente en electrónica de potencia y en circuitos digitales. A diferencia de los transistores bipolares, los MOSFET no requieren corriente de base para funcionar, lo que los hace más eficientes en términos energéticos.|![image](https://user-images.githubusercontent.com/107650526/234456786-06ecc652-d9ea-40d2-b326-f528f991f2fa.png)|1|$65|
+|9|Modulo MOSFET|Es un tipo de transistor que se utiliza comúnmente en electrónica de potencia y en circuitos digitales. A diferencia de los transistores bipolares, los MOSFET no requieren corriente de base para funcionar, lo que los hace más eficientes en términos energéticos.|![image](https://user-images.githubusercontent.com/107650526/234456786-06ecc652-d9ea-40d2-b326-f528f991f2fa.png)|1|$66|
 |10|Raspberry Pi|La Raspberry Pi es una computadora de bajo costo y con un tamaño compacto, del porte de una tarjeta de crédito, puede ser conectada a un monitor de computador o un TV, y usarse con un mouse y teclado estándar.|![Aspose Words c0a6ef2d-04fd-41d4-a1ce-ebc52d1e014c 005](https://user-images.githubusercontent.com/107650526/217643461-162a8340-858d-44ec-846c-71d76e0cf938.jpeg)|1|$3000|
 
-## Epicas del proyecto (Minimo debe de haber una épica por integrante de equipo)
+## Epicas del Proyecto
 \-	Quiero un dispositivo que alimente a mi mascota en caso de que no me encuentre en casa
 
 \-	Quiero que el dispositivo alimente a mi mascota sin la necesidad de que yo tenga que alimentarlo.
@@ -51,7 +54,7 @@ Se pretende elaborar un dispositivo el cual cumpla la función de proveer de ali
 
 \-	Quiero que a través del dispositivo revisar cuantas veces se ha servido comida a mi mascota.
 
-## Tabla de historias de usuario
+## Tabla de Historias de Usuario
 |Id|Historia de usuario|Prioridad|Estimación|Como probarlo|Responsable|
 | :-: | :-: | :-: | :-: | :-: | :-: |
 |1|Quiero un dispositivo que pueda controlar por medio de wi-fi |Media|3 semanas|Verificando que el dispositivo se conecte a la red en el dashboard|Cristian Emmanuel Gutiérrez Díaz|
@@ -59,7 +62,7 @@ Se pretende elaborar un dispositivo el cual cumpla la función de proveer de ali
 |3|Quiero que a través del dispositivo pueda monitorear la temperatura del agua y la humedad de la comida|Media|3 semanas|Verificando el dashboard y con la ayuda de un termómetro |Nayeli Moya Díaz |
 |4|Quiero que a través del dispositivo revisar cuantas veces se ha servido comida a mi mascota.|Baja|3 semanas|Con la ayuda del dashboard y con una estimación del alimento sobrante|Oscar Iván Pérez Mejía|
 
-## Prototipo en dibujo
+## Prototipo en Dibujo
 ![Aspose Words c0a6ef2d-04fd-41d4-a1ce-ebc52d1e014c 006](https://user-images.githubusercontent.com/107650526/217642875-0c6262e4-34b8-4484-9b81-54537164564c.jpeg)
 
 
