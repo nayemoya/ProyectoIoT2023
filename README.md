@@ -1,9 +1,9 @@
 # ProyectoIoT2023
 
--Grupo: GDS0453 
--5 Cuatrimestre
--Aplicaciones de IoT
--Documentación proyecto IoT 
+Grupo: GDS0453  
+5 Cuatrimestre  
+Aplicaciones de IoT  
+Documentación proyecto IoT  
 
 ## Nombre del proyecto
 Comedor Bélico
